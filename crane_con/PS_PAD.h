@@ -26,16 +26,16 @@ public:
         ANALOG_LX,
         ANALOG_LY,
     };
-	PS_PAD::PS_PAD (byte ss_pin);
+  PS_PAD::PS_PAD (byte ss_pin);
     int init ();
     int poll ();
     int read (TYPE t);
     int vibration (int v1, int v2);
  
 private:
-	byte _ss_pin;
-	SPISettings _SPISettings;
-	
+  byte _ss_pin;
+  SPISettings _SPISettings;
+  
     uint8_t _pad[6];
     int _vib1, _vib2;
     bool _connected;
